@@ -5,3 +5,5 @@
 [node name="Tutorial Level" type="Node2D"]
 
 [node name="George" parent="." instance=ExtResource("1_vasfb")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
