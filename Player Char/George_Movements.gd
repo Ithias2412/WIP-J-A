@@ -11,14 +11,11 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-	if abs(velocity.x) > 0:
+	if (abs(velocity.x) > 0 or abs(velocity.y) > 0):
 		animated_sprite_2d.play("George_Move")
+		if velocity.x < 0:
+			animated_sprite_2d.flip_h = true
+		if velocity.x > 0:
+			animated_sprite_2d.flip_h = false
 	else:
-		if abs(velocity.y) > 0:
-			animated_sprite_2d.play("George_Move")
-		else:
-			animated_sprite_2d.play("George_Idle")
-	if velocity.x < 0:
-		animated_sprite_2d.flip_h = true
-	if velocity.x > 0:
-		animated_sprite_2d.flip_h = false
+		animated_sprite_2d.play("George_Idle")

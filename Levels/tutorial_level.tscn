@@ -1,13 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c68clxkbkinfg"]
+[gd_scene load_steps=2 format=3 uid="uid://c68clxkbkinfg"]
 
 [ext_resource type="PackedScene" uid="uid://dxf085a06gmwl" path="res://Player Char/george.tscn" id="1_vasfb"]
-[ext_resource type="PackedScene" uid="uid://2apu5uvk000l" path="res://NPCs/Fake George.tscn" id="2_kv7x3"]
 
 [node name="Tutorial Level" type="Node2D"]
 
 [node name="George" parent="." instance=ExtResource("1_vasfb")]
 
 [node name="Camera2D" type="Camera2D" parent="George"]
-
-[node name="Fake George" parent="." instance=ExtResource("2_kv7x3")]
-position = Vector2(927, 47)
