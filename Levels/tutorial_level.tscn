@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://c68clxkbkinfg"]
+[gd_scene load_steps=3 format=3 uid="uid://c68clxkbkinfg"]
 
 [ext_resource type="PackedScene" uid="uid://dxf085a06gmwl" path="res://Player Char/george.tscn" id="1_vasfb"]
+
+[sub_resource type="TileSet" id="TileSet_4f84d"]
 
 [node name="Tutorial Level" type="Node2D"]
 
 [node name="George" parent="." instance=ExtResource("1_vasfb")]
 
 [node name="Camera2D" type="Camera2D" parent="George"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4f84d")
+format = 2
