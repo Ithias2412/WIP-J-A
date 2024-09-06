@@ -15,7 +15,7 @@ func _process (_delta):
 	direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	velocity = direction * move_speed
 	#this runs the updateanim func if both return true
-	if SetState() == true || SetDirection() == true:
+	if SetState() == true or SetDirection() == true:
 		UpdateAnimation()
 	
 func _physics_process(_delta):
